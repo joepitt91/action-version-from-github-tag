@@ -25,7 +25,7 @@ inputs:
 outputs:
   tag:
     description: The tag for the latest version.
-    value: ${{ steps.get_version.outputs.release }}
+    value: ${{ steps.get_version.outputs.tag }}
   version:
     description: The latest version number.
     value: ${{ steps.get_version.outputs.version }}
