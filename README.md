@@ -14,8 +14,8 @@ Get the latest version from the tags in a GitHub repository.
 | token | The token to authenticate to GitHub with. | Yes |  |
 | owner | The owner of the source repository. | yes |  |
 | repository | The name of the source repository. | Yes |  |
-| minimum_version | The minimum version number to accept, e.g. 2.0.0. | No | None |
-| maximum_version | The maximum version number to accept, e.g. 2.99.99. | No | None |
+| greater_equal_version | The minimum version to accept, e.g. 2.0.0. | No | None |
+| less_than_version | The version to accept versions less than, e.g. 3.0.0. | No | None |
 
 ## Outputs
 
@@ -29,7 +29,7 @@ Get the latest version from the tags in a GitHub repository.
 ```yaml
       - name: Get Latest ComfyUI Version
         id: version
-        uses: joepitt91/action-version-from-github-tag@v1
+        uses: joepitt91/action-version-from-github-tag@v2
         with:
           token: ${{ secrets.PACKAGE_READER_PAT }}
           owner: comfyanonymous
